@@ -1,0 +1,27 @@
+.from {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.from .signup-heading h2 {
+    font-size: clamp(2rem, 10vw, 4rem);
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+
+.input-wrapper .email-wrapper .email {
+    width: 300px;
+}
+
+.input-wrapper .password-wrapper .password {
+    width: 300px;
+}

@@ -1,0 +1,5 @@
+.latest-product-heading {
+    text-align: center;
+    font-size: clamp(1rem, 10vw, 3rem);
+    margin-top: 50px;
+}

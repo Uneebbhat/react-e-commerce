@@ -1,0 +1,30 @@
+/* LoaderCard.css */
+.loader-card {
+    background-color: #f0f0f0;
+    max-width: 300px;
+    padding: 20px;
+}
+
+.skeleton-loader {
+    background-color: #ddd;
+    height: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card-head .skeleton-loader {
+    height: 150px;
+}
+
+.card-body .skeleton-loader {
+    height: 20px;
+}
+
+.about-product .skeleton-loader {
+    width: 80%;
+}
+
+.card-button .skeleton-loader {
+    width: 50%;
+    height: 30px;
+}
