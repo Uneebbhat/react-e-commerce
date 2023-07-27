@@ -18,8 +18,8 @@ function App() {
         {window.location.pathname !== "/signup" &&
           window.location.pathname !== "/signin" && <Navbar />}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/products" element={<Products />} />
           <Route path="/latestproducts" element={<LatestProducts />} />
