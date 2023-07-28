@@ -49,3 +49,21 @@
     color: #272727;
     text-decoration: none;
 }
+
+.filters {
+    padding: 50px 90px 0 90px;
+}
+
+.filter-selector {
+    background-color: #272727;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    outline: 0;
+    border: 0;
+}
+
+.filter-selector option {
+    border: 0;
+    outline: 0;
+}

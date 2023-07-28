@@ -7,6 +7,16 @@ export default function Products() {
   const api = "https://fakestoreapi.com/products";
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedFilter, setSelectedFilter] = useState("");
+
+  const handleFilterChange = (e) => {
+    setSelectedFilter(e.target.value);
+  };
+
+  const filterProducts = selectedFilter
+    ? data.filter((product) => product.category === selectedFilter)
+    : data;
+
   useEffect(() => {
     fetch(api)
       .then((res) => res.json())
@@ -26,8 +36,18 @@ export default function Products() {
   return (
     <>
       <sectin className="products">
+        <div className="filters">
+          <select
+            className="filter-selector"
+            value={selectedFilter}
+            onChange={handleFilterChange}>
+            <option value="">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+          </select>
+        </div>
         <div className="product-wrapper">
-          {data.map((product, id) => (
+          {filterProducts.map((product, id) => (
             <div className="card" key={id}>
               <div className="card-head">
                 <img src={product.image} alt="hello" />
