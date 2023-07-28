@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Loader from "../Loader/Loader";
 
 export default function LatestProducts() {
-  const api = "https://fakestoreapi.com/products";
+  const api = "https://fakestoreapi.com/products?limit=5";
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {

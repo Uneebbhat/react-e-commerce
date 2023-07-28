@@ -24,7 +24,7 @@ export default function SignIn() {
         loginEmail,
         loginPassword
       );
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       if (error.code === "auth/user-not-found") {
         setErrorMessage("This user does not exist");
@@ -80,7 +80,7 @@ export default function SignIn() {
           </div>
           <div className="small-text">
             <p>
-              Already have an account? <Link to="/signup">Sign up here</Link>
+              Already have an account? <Link to="/">Sign up here</Link>
             </p>
           </div>
           {errorMessage && <Alert severity="error">{errorMessage}</Alert>}
