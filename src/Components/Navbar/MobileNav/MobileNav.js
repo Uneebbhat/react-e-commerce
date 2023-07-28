@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./MobileNav.css";
 import { signOut } from "firebase/auth";
 import { auth } from "../../Firebase/firebaseConfig";
@@ -6,10 +6,10 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function MobileNav() {
   const navigate = useNavigate();
-  const [showMobileNav, setShowMobileNav] = useState(false);
-  const handleMobNav = () => {
-    setShowMobileNav(!showMobileNav);
-  };
+  // const [showMobileNav, setShowMobileNav] = useState(false);
+  // const handleMobNav = () => {
+  //   setShowMobileNav(!showMobileNav);
+  // };
 
   const logout = async () => {
     await signOut(auth);

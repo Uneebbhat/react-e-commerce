@@ -7,7 +7,7 @@
 }
 
 .from .signup-heading h2 {
-    font-size: clamp(2rem, 10vw, 4rem);
+    font-size: clamp(2.5rem, 10vw, 4rem);
 }
 
 .input-wrapper {

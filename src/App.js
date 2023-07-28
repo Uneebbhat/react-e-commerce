@@ -14,7 +14,6 @@ function App() {
   return (
     <>
       <Router>
-        {/* Only show the navbar if the user is not on the signup or signin page */}
         {window.location.pathname !== "/signup" &&
           window.location.pathname !== "/signin" && <Navbar />}
         <Routes>

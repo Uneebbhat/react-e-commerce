@@ -25,7 +25,9 @@ export default function DesktopNav() {
       <div className="nav-wrapper">
         <nav className="navbar">
           <div className="logo-wrapper">
-            <img src={logo} alt="amazon" />
+            <Link to="/home">
+              <img src={logo} alt="amazon" />
+            </Link>
           </div>
           <div className="navbar-links-wrapper">
             <div className="nav-links">
