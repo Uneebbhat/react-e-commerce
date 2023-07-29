@@ -11,6 +11,8 @@ import { Link, useNavigate } from "react-router-dom";
 export default function DesktopNav() {
   const navigate = useNavigate();
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [cartItemNumber, setCartItemNumber] = useState(0);
+
   const handleMobNav = () => {
     setShowMobileNav(!showMobileNav);
   };
@@ -46,6 +48,7 @@ export default function DesktopNav() {
               <div className="nav-icons">
                 <Link to="/cart">
                   <AiOutlineShoppingCart className="cart-icon" />
+                  <span className="cart-items-count">{cartItemNumber}</span>
                 </Link>
               </div>
               <div className="menu" onClick={handleMobNav}>

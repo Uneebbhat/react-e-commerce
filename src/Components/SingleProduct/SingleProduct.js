@@ -4,7 +4,7 @@ import "./SingleProduct.css";
 import Loader from "../Loader/Loader";
 import Alert from "@mui/material/Alert";
 
-const SingleProduct = () => {
+const SingleProduct = ({ cartItemNumber, setCartItemNumber }) => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
@@ -21,7 +21,8 @@ const SingleProduct = () => {
     const newItem = { image: product.image, title: product.title };
     cartItems.push(newItem);
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    setShowAlert(true); // Set showAlert to true to display the alert
+    setShowAlert(true);
+    setCartItemNumber(cartItemNumber + 1);
 
     setTimeout(() => {
       setShowAlert(false);
@@ -49,7 +50,7 @@ const SingleProduct = () => {
             <p className="price">Price: ${product.price}</p>
           </div>
           <div className="cart-button">
-            <button className="cart-btn" onClick={addToCart}>
+            <button className="cart-btn" onClick={() => addToCart()}>
               Add to cart
             </button>
           </div>

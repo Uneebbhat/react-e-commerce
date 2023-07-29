@@ -29,6 +29,13 @@
     margin: 8px;
 }
 
+.card .card-body .about-product h4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .card .card-body .about-product .card-small-details .price {
     font-weight: bold;
 }
