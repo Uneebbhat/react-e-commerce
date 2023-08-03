@@ -48,6 +48,7 @@ export default function Products() {
             <option value="jewelery">Jewelery</option>
           </select>
         </div>
+
         <div className="product-wrapper">
           {filterProducts.map((product, id) => (
             <div className="card" key={id}>
