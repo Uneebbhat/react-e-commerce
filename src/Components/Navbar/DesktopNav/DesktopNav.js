@@ -18,7 +18,6 @@ export default function DesktopNav() {
   if (localStorage.getItem("cartItems")) {
     cart = JSON.parse(localStorage.getItem("cartItems"));
     count = cart.length;
-    console.log(count);
   }
 
   const handleMobNav = () => {
