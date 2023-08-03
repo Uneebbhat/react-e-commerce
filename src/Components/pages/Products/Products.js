@@ -43,7 +43,9 @@ export default function Products() {
             onChange={handleFilterChange}>
             <option value="">All</option>
             <option value="electronics">Electronics</option>
-            <option value="clothing">Clothing</option>
+            <option value="men's clothing">Men's clothing</option>
+            <option value="women's clothing">Women's clothing</option>
+            <option value="jewelery">Jewelery</option>
           </select>
         </div>
         <div className="product-wrapper">

@@ -4,7 +4,7 @@ import "./SingleProduct.css";
 import Loader from "../Loader/Loader";
 import Alert from "@mui/material/Alert";
 
-const SingleProduct = ({ cartItemNumber, setCartItemNumber }) => {
+const SingleProduct = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
@@ -22,7 +22,6 @@ const SingleProduct = ({ cartItemNumber, setCartItemNumber }) => {
     cartItems.push(newItem);
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     setShowAlert(true);
-    setCartItemNumber(cartItemNumber + 1);
 
     setTimeout(() => {
       setShowAlert(false);
