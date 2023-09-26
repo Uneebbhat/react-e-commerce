@@ -29,6 +29,7 @@ export default function LatestProducts() {
         <div className="latest-product-wrapper">
           {data.map((product, id) => (
             <div className="card" key={id}>
+              <span className="new-tag">NEW</span>
               <div className="card-head">
                 <img src={product.image} alt="hello" />
               </div>
