@@ -19,7 +19,7 @@ import Cart from "./Components/pages/Cart/Cart";
 function NavbarWithVisibility() {
   const location = useLocation();
   const isSignupOrSigninPage =
-    location.pathname === "/signup" || location.pathname === "/signin";
+    location.pathname === "/" || location.pathname === "/signin";
 
   return !isSignupOrSigninPage ? <Navbar /> : null;
 }
