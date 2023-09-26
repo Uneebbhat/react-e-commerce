@@ -49,3 +49,9 @@
     color: #272727;
     text-decoration: none;
 }
+
+@media screen and (max-width: 619px) {
+    .latest-product-wrapper {
+        place-items: center;
+    }
+}

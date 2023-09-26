@@ -9,7 +9,7 @@
 
 .card {
     background-color: rgb(255, 255, 255);
-    max-width: 300px;
+    max-width: 250px;
     padding: 20px;
 }
 
@@ -58,7 +58,10 @@
 }
 
 .filters {
-    padding: 50px 90px 0 90px;
+    max-width: 1140px;
+    margin-inline: auto;
+    margin-top: 50px;
+    padding: 20px;
 }
 
 .filter-selector {
@@ -73,4 +76,24 @@
 .filter-selector option {
     border: 0;
     outline: 0;
+}
+
+@media screen and (width <=686px) {
+    .filters {
+        padding: 50px 20px 0 20px;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .card {
+        background-color: rgb(255, 255, 255);
+        max-width: 200px;
+        padding: 20px;
+    }
+
+    .product-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0;
+        place-items: center;
+    }
 }
