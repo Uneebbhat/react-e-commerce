@@ -2,8 +2,8 @@
     padding: 5px 10px;
     outline: none;
     margin-right: 8px;
-    background-color: "#272727";
-    color: "white";
+    background-color: #272727;
+    color: white;
 }
 
 @media screen and (max-width: 576px) {
