@@ -17,7 +17,13 @@ export default function SearchBar({
         <input
           type="text"
           className="input-field border border-black rounded"
-          style={{ padding: "5px 10px", outline: "none", marginRight: "8px" }}
+          style={{
+            padding: "5px 10px",
+            outline: "none",
+            marginRight: "8px",
+            background: "#272727",
+            color: "white",
+          }}
           placeholder="Item Name"
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -26,7 +32,8 @@ export default function SearchBar({
           <select
             value={selectedFilter}
             onChange={handleFilterChange}
-            className="border border-gray-300 rounded-md p-2">
+            className="border border-gray-300 rounded-md p-2"
+            style={{ background: "#272727", color: "white" }}>
             <option value="all">All Categories</option>
             <option value="electronics">Electronics</option>
             <option value="men's clothing">Men's clothing</option>
