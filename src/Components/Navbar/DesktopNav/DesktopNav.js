@@ -42,7 +42,7 @@ export default function DesktopNav() {
             <div className="nav-links">
               <ul className="nav-ul">
                 <li>
-                  <Link to="/home">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
                   <Link to="/products">Products</Link>

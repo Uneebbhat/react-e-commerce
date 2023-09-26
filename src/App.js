@@ -19,7 +19,7 @@ import Cart from "./Components/pages/Cart/Cart";
 function NavbarWithVisibility() {
   const location = useLocation();
   const isSignupOrSigninPage =
-    location.pathname === "/" || location.pathname === "/signin";
+    location.pathname === "/signup" || location.pathname === "/signin";
 
   return !isSignupOrSigninPage ? <Navbar /> : null;
 }
@@ -30,8 +30,8 @@ function App({ search }) {
       <Router>
         <NavbarWithVisibility />
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/" element={<SignUp />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/products" element={<Products search={search} />} />
           <Route path="/latestproducts" element={<LatestProducts />} />
