@@ -26,6 +26,7 @@ export default function DesktopNav() {
 
   const logout = async () => {
     await signOut(auth);
+    // ds
     navigate("/signin");
   };
 
