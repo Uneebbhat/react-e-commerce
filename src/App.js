@@ -14,7 +14,6 @@ import LatestProducts from "./Components/LatestProducts/LatestProducts";
 import SingleProduct from "./Components/SingleProduct/SingleProduct";
 import Products from "./Components/pages/Products/Products";
 import Cart from "./Components/pages/Cart/Cart";
-import AddItem from "./Components/AddItem/AddItem";
 
 // New component for Navbar visibility handling
 function NavbarWithVisibility() {
