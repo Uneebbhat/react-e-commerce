@@ -22,7 +22,7 @@ export default function MobileNav() {
         <div className="mob-nav-links">
           <ul>
             <li className="li">
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className="li">
               <Link to="/products">Products</Link>

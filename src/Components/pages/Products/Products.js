@@ -11,12 +11,22 @@ export default function Products() {
   const [selectedFilter, setSelectedFilter] = useState("all");
 
   useEffect(() => {
-    fetch(api)
-      .then((res) => res.json())
-      .then((data) => {
+    async function fetchData() {
+      try {
+        const response = await fetch(api);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
         setData(data);
         setIsLoading(false);
-      });
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setIsLoading(false);
+      }
+    }
+
+    fetchData();
   }, []);
 
   const handleFilterChange = (event) => {
@@ -25,7 +35,7 @@ export default function Products() {
 
   const filteredData = data.filter((product) => {
     if (selectedFilter === "all") {
-      return true; // Show all products when "All" is selected
+      return true;
     } else {
       return product.category.toLowerCase() === selectedFilter.toLowerCase();
     }
