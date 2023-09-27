@@ -35,7 +35,7 @@ export default function Products() {
 
   const filteredData = data.filter((product) => {
     if (selectedFilter === "all") {
-      return true;
+      return true; // Show all products when "All" is selected
     } else {
       return product.category.toLowerCase() === selectedFilter.toLowerCase();
     }

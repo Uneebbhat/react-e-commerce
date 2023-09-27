@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./DesktopNav.css";
 import logo from "../../../assets/logo.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -11,6 +11,15 @@ import { Link, useNavigate } from "react-router-dom";
 export default function DesktopNav() {
   const navigate = useNavigate();
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   let cart = [];
   let count = 0;
@@ -48,6 +57,11 @@ export default function DesktopNav() {
                 <li>
                   <Link to="/products">Products</Link>
                 </li>
+                {user && user.email === "admin@admin.com" && (
+                  <li>
+                    <Link to="/add-item">Add Item</Link>
+                  </li>
+                )}
               </ul>
             </div>
           </div>
